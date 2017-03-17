@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="app.racdeveloper.com.ICoNS.commentOnNewsFeed.AddCommentFragment"
+    >
+
+    <EditText
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:hint="Write Comment"
+        android:gravity="start"
+        android:id="@+id/addCommentEditText"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="66dp"
+        />
+
+    <Button
+        android:text="Add"
+        android:layout_width="55dp"
+        android:layout_height="37dp"
+        android:background="#0f1546"
+        android:textColor="#fff"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="63dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/addCommentButton" />
+
+    <TextView
+        android:text="Comments"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="17dp"
+        android:id="@+id/textView" />
+</RelativeLayout>

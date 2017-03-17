@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_qp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a Profile Pic..."
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:id="@+id/bProfileUpload"
+        android:text="Upload Pic"
+        android:background="#a33335"
+        android:textColor="#ffffff"
+        />
+
+    <com.edmodo.cropper.CropImageView
+        android:id="@+id/CropProfileImage"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/content_padding"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:imageResource="@android:drawable/ic_menu_camera"
+        android:layout_below="@+id/bProfileUpload"
+        />
+
+    <Button
+        android:id="@+id/bCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/content_padding"
+        android:layout_centerHorizontal="true"
+        android:text="@string/crop"
+        android:layout_below="@+id/CropProfileImage"
+        android:textSize="17sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="19sp"
+        android:textColor="#fff"
+        android:background="#171646"
+        android:id="@+id/bSendProfilePic"
+        android:layout_below="@+id/bCrop"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "846913628722",
+    "firebase_url": "https://becon-ff067.firebaseio.com",
+    "project_id": "becon-ff067",
+    "storage_bucket": "becon-ff067.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846913628722:android:19959979fd75c068",
+        "android_client_info": {
+          "package_name": "app.racdeveloper.com.bencolconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846913628722-g60cov1pfe27fjl1mucmvho5rr9faa4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrIzm5huss4yr3N2PSwK5_sB3d9imehLQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

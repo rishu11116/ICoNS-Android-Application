@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">ICoNS</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">College ID</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_notifications_label">Notifications</string>
+    <string name="pref_notifications_key">notifications</string>
+    <string name="pref_notifications_off">Disabled</string>
+    <string name="pref_notifications_on">Enabled</string>
+    <string name="pref_notifications_default">Enabled</string>
+    <string name="pref_storage_label">Storage (PDFs)</string>
+    <string name="pref_storage_key">storage</string>
+    <string name="pref_storage_internal">Internal Storage</string>
+    <array name="pref_storage_options">
+        <item>Internal Storage</item>
+        <item>SD Card</item>
+    </array>
+    <array name="pref_storage_values">
+        <item>Internal Storage</item>
+        <item>SD Card</item>
+    </array>
+
+    <string-array name="semester">
+        <item>--Select--</item>
+        <item>I Semester</item>
+        <item>II Semester</item>
+        <item>III Semester</item>
+        <item>IV Semester</item>
+        <item>V Semester</item>
+        <item>VI Semester</item>
+        <item>VII Semester</item>
+        <item>VIII Semester</item>
+    </string-array>
+    <string-array name="branch">
+        <item>--Select--</item>
+        <item>Civil Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Computer Science And Engineering</item>
+        <item>Electronics And Communication Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Information Technology</item>
+        <item>Mechanical Engineering</item>
+    </string-array>
+    <string-array name="branchShort">
+        <item>--Select--</item>
+        <item>CE</item>
+        <item>CH</item>
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>EE</item>
+        <item>IT</item>
+        <item>ME</item>
+    </string-array>
+    <string-array name="batch">
+        <item>--Select--</item>
+        <item>2012–16</item>
+        <item>2013–17</item>
+        <item>2014–18</item>
+        <item>2015–19</item>
+        <item>2016–20</item>
+        <item>2017–21</item>
+        <item>2018–22</item>
+    </string-array>
+
+    <!-- Crop Image Strings     -->
+    <string name="crop">Crop</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.racdeveloper.com.ICoNS">
+
+    <uses-permission android:name="android.permission.CAMERA"   android:required="true"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="app.racdeveloper.com.ICoNS.newsFeed.NewsFeedController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:icon, android:label, android:theme, android:name"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="app.racdeveloper.com.ICoNS.appStartup.SplashActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name="app.racdeveloper.com.ICoNS.SignUpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.LoginActivity" android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.ProfileActivity" android:screenOrientation="portrait"> </activity>
+        <activity android:name="app.racdeveloper.com.ICoNS.MailToAdminActivity"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.SettingsActivity" android:screenOrientation="portrait"
+            android:parentActivityName="app.racdeveloper.com.ICoNS.ProfileActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.racdeveloper.com.ICoNS.ProfileActivity" />
+        </activity>
+        <activity android:name="app.racdeveloper.com.ICoNS.commentOnNewsFeed.CommentsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.questionPapers.QuestionChooserActivity"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.questionPapers.QuestionPaperActivity"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.resumesList.ResumeActivity"></activity>
+        <activity android:name="app.racdeveloper.com.ICoNS.aboutUs.DeveloperActivity"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.pushNotification.NotificationList"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.appStartup.IntroActivity" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.fetchProfiles.MyProfile" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.fetchProfiles.UpdateProfileDetails" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.fetchProfiles.UpdateProfilePic" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.pushNotification.NotificationViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.pushNotification.NotificationWebview" android:screenOrientation="portrait"/>
+        <activity android:name="app.racdeveloper.com.ICoNS.PostMsgActivity" android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.racdeveloper.com.ICoNS.ProfileActivity"/>
+        </activity>
+
+        <!-- Firebase Notifications -->
+        <service android:name="app.racdeveloper.com.ICoNS.pushNotification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="app.racdeveloper.com.ICoNS.pushNotification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <receiver android:name="app.racdeveloper.com.ICoNS.pushNotification.StartServiceOnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

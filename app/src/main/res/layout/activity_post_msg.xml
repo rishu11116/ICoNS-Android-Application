@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_qp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="343dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPost"
+            android:hint="What's on your mind..."/>
+        <EditText
+            android:layout_width="343dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUrl"
+            android:hint="Add a Url (Max. 255 Characters)"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/ivPost"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            />
+
+        <com.edmodo.cropper.CropImageView
+            android:id="@+id/CropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/content_padding"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/Button_crop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/content_padding"
+            android:minWidth="120dp"
+            android:text="@string/crop"
+            android:background="#eee"
+            android:textColor="#33B5E5"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_camera"
+            android:text="Upload"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:background="#a33335"
+            android:textColor="#ffffff"
+            android:id="@+id/bUpload" />
+
+        <Button
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textColor="#fff"
+            android:background="#171646"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:textSize="19sp"
+            android:id="@+id/bSend" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

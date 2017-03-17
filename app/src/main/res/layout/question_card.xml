@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:elevation="13dp"
+    style="@style/CardView.Light"
+    android:onClick="download"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="14dp"
+    card_view:cardCornerRadius="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/paperImage"
+            android:onClick="download"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:src="@drawable/paper"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/paperName"
+            android:layout_below="@id/paperImage"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:onClick="download"
+            android:textColor="@color/cardview_dark_background"
+            android:text="paperName"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:typeface="sans"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/paperContributor"
+            android:layout_below="@id/paperName"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:onClick="download"
+            android:textColor="@color/cardview_dark_background"
+            android:text="paperContributor"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:typeface="sans"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

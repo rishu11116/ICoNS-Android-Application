@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:background="@drawable/profile_cover">
+
+        <ImageView
+            android:id="@+id/user_profile_photo"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/my_profile_circular_border_imageview"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_pic" />
+
+        <ImageView
+            android:id="@+id/profile_update"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="122dp"
+            android:layout_alignParentRight="true"
+            android:onClick="MyProfileEdit"
+            android:background="@android:color/transparent"
+            android:src="@drawable/edit"
+            android:layout_toRightOf="@+id/user_profile_name" />
+
+        <TextView
+            android:id="@+id/user_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/user_profile_photo"
+            android:layout_centerHorizontal="true"
+            android:text="User Name"
+            android:textColor="#060606"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/user_profile_short_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@+id/user_profile_name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Welcome to BIET\n User Profile is loading. Please wait..."
+            android:textColor="#060c2e"
+            android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/fb_link_image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fb_link_image"
+                android:layout_marginRight="8dp"/>
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/linkedin_link_image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/linkedin_link_image"
+                android:layout_marginRight="10dp"/>
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/github_link_image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/twitter_link_image"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/progressbar"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/profile_layout"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressbar"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_qp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Branch :"
+                android:id="@+id/user_profile_branch" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Year :"
+                android:textStyle="bold"
+                android:id="@+id/user_profile_batch" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="College Id :"
+                android:id="@+id/user_profile_id" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Contact :"
+                android:id="@+id/user_profile_contact" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Active Councils :"
+                android:id="@+id/user_profile_councils" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Skills :"
+                android:id="@+id/user_profile_skills" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:background="#f2ffff"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Hobbies :"
+                android:id="@+id/user_profile_hobbies"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Blood Group :"
+                android:id="@+id/user_profile_blood"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Address :"
+                android:id="@+id/user_profile_address"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#f2ffff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:text="Email :"
+                android:id="@+id/user_profile_email" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

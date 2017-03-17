@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="8dp"
+        android:background="@drawable/bg1">
+
+        <ProgressBar
+            android:id="@+id/progress_register"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="156dp"
+            android:layout_height="156dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="258dp"
+            android:visibility="gone"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_signup">
+        <!-- Login Form -->
+
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp">
+            <EditText
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etUserId"
+                android:hint="Roll Number eg. 1404310035"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:textColor="#fff"
+                android:inputType="number|numberPassword|phone"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etName"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="Name"
+                android:textColor="#fff"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp" >
+            <EditText
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmail"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:maxLines="1"
+                android:textColor="#fff"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="324dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingTop="10dp"
+            android:textSize="18sp"
+            android:text="Branch  :  "
+            android:id="@+id/branch"
+            android:layout_alignParentLeft="true" />
+
+        <Spinner
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/spinnerbranch"
+            android:layout_alignTop="@+id/branch"
+            android:layout_toRightOf="@+id/branch"
+            android:layout_toEndOf="@+id/branch"
+            android:textColor="#fff"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="324dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingTop="10dp"
+                android:textSize="18sp"
+                android:text=" Batch    :  "
+                android:id="@+id/batch"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/spinnerbatch"
+                android:layout_alignTop="@+id/batch"
+                android:layout_toRightOf="@+id/batch"
+                android:layout_toEndOf="@+id/batch"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPassword"
+                android:inputType="textPassword"
+                android:hint="Password(min 6 characters)"
+                android:maxLines="1"
+                android:textColor="#fff"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etConfirmPassword"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"
+                android:maxLines="1"
+                android:textColor="#fff"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <Button
+            style="?android:textAppearanceSmall"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="10dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:background="#f3b96f"
+            android:textColor="#2b2a2a"
+            android:id="@+id/bSignUp" />
+    </LinearLayout>
+        <!-- Login Form Ends -->
+    </ScrollView>
+</RelativeLayout>

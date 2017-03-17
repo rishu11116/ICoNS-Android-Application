@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/single_comment_item">
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY"
+        android:id="@+id/commentUserImage"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:text="UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#660e0e"
+        android:layout_alignTop="@+id/commentUserImage"
+        android:layout_toRightOf="@+id/commentUserImage"
+        android:layout_marginStart="10dp"
+        android:id="@+id/commentUserName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment!"
+        android:layout_below="@+id/commentUserName"
+        android:layout_alignLeft="@+id/commentUserName"
+        android:layout_alignStart="@+id/commentUserName"
+        android:id="@+id/commentText"
+        android:textSize="15dp"
+        android:textColor="#080228"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/edit"
+        android:scaleType="fitXY"
+        android:id="@+id/editCommentOption"
+        android:layout_alignTop="@+id/commentUserName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+</RelativeLayout>

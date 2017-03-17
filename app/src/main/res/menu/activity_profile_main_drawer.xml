@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/menu_profile"
+            android:title=" My Profile"
+            />
+        <item
+            android:id="@+id/nav_add_post"
+            android:icon="@drawable/menu_add_post"
+            android:title=" Add Post"/>
+        <item
+            android:id="@+id/nav_question_paper"
+            android:icon="@drawable/menu_question_paper"
+            android:title=" Question Paper"
+            />
+        <item
+            android:id="@+id/nav_resumes"
+            android:icon="@drawable/menu_resume"
+            android:title=" Resumes &amp; CVs"
+            />
+        <item
+            android:id="@+id/nav_resultViewer"
+            android:icon="@drawable/menu_results"
+            android:title=" Result Viewer"
+            />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/menu_notifications"
+            android:title=" Notification List"
+            />
+    </group>
+    <item android:title="Extras">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutUs"
+                android:icon="@drawable/menu_developers"
+                android:title=" Developers"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/menu_logout"
+                android:title=" Logout"/>
+        </menu>
+    </item>
+</menu>
